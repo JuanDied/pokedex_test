@@ -47,7 +47,7 @@ export function PokeCard(pokemon){
                     {show ? "Hide " : "Show "} 
                     <span className=''>Details</span>
                 </button>
-                {show ? <Details key={pokemon.id} {...pokemon} /> : null}
+                {show ? <Details key={pokemon.id} pokemon={pokemon}/> : null}
                 
             </aside>
 
