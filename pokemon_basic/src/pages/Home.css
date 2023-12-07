@@ -1,0 +1,11 @@
+.list-of-pokemons {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    justify-content: space-evenly;
+    width: 100vh;
+    height: 100vh;
+    background: rgb(109, 109, 215);
+
+
+}

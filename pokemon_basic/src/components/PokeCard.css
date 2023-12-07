@@ -1,0 +1,75 @@
+.poke-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aqua;
+    color: #fff;
+    font-size: .8rem;
+    
+    justify-content: space-between;
+
+    
+
+    
+}
+
+.poke-card-info {
+    position:absolute;
+    text-align:center;
+}
+
+.poke-card-info h1 {
+    margin:auto;
+    line-height:51px;
+    vertical-align:middle;
+}
+.poker-card-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poke-card-sprite{
+/*     width: 1000px;
+    height: 1000px;
+     */
+    
+}
+
+.poke-card-info{
+
+    
+
+    
+}
+
+.poke-card-button{
+    margin-top: 10vh;
+
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.5em 1em;
+    font-size: .8em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    color: #242424;
+    background-color: #f9f9f9;
+   
+}
+
+.poke-card-button:hover {
+    border-color: #646cff;
+  }
+  .poke-card-button:focus,
+  .poke-card-button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+
+
+.poke-card-detail{
+    display: flex;
+    flex-direction: column;
+}
