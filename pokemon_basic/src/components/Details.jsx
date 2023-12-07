@@ -8,12 +8,12 @@ export function Details({pokemon}){
             <h1>Details</h1>
             <span>{pokemon.name}</span>
             <div>
-            {pokemon.abilities.map( abilitie => {
-                console.log("----",abilitie)
+            {pokemon.abilities.map( ability => {
+                console.log("----",ability)
                 return(
-                <div key={abilitie.ability.name}>
-                    <p>Name: {abilitie.ability.name} </p>
-                    <p>Effect: {abilitie.ability.short_effect} </p>
+                <div key={ability.ability.name}>
+                    <p>Name: {ability.ability.name} </p>
+                    <p>Effect: {ability.ability.effect_entries[0].short_effect} </p>
                 </div> )       
         
             }
