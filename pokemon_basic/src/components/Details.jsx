@@ -1,4 +1,4 @@
-import './details.css'
+import './Details.css'
 
 export function Details({pokemon}){ 
     console.log(typeof pokemon, pokemon)
@@ -7,7 +7,7 @@ export function Details({pokemon}){
         <div  className='card-details'>
             <h1>Details</h1>
             <span>{pokemon.name}</span>
-            <div>
+            <div className='det-abilities'>
             {pokemon.abilities.map( ability => {
                 console.log("----",ability)
                 return(

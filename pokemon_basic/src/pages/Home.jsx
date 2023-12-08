@@ -1,4 +1,4 @@
-import { PokeCard } from "../components/pokeCard.jsx";
+import { PokeCard } from "../components/PokeCard.jsx";
 
 import './Home.css'
 import pokemons from "../data/poke-json.json";
