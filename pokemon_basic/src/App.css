@@ -1,18 +1,29 @@
 
 /* .App {
-  display: flex;
+  display: grid;
   flex-direction: column;
   gap: 8px;
-}
- */
+  align-items: center;
+  
+   place-items: center;
+   place-content:  center;
+} */
+
 /* #root {
+  padding: 2rem;
+  background-color: #d875ff7f;
+  align-self: center;
+} */
+
+
+/*  #root {
   
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   background: #646cffaa  ;
-}
-
+} */
+/*
 .logo {
   height: 6em;
   padding: 1.5em;

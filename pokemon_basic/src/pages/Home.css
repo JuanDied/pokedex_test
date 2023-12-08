@@ -4,9 +4,12 @@
     place-items: center;
     justify-content: space-evenly;
     width: 100vw;
-    height: 100vh;
-    background: rgb(109, 109, 215);
-    /* flex-wrap: wrap; */
+    height: 100%;
+    background: rgb(134, 134, 215);
+    padding: 10px 10px;
+    /* flex-wrap: nowrap; */
+    
+    
     
 
 
@@ -20,3 +23,58 @@
         align-items: center;
     }
 } 
+
+form {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+.search-side{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    background-color: rgb(232, 141, 255);
+}
+
+
+
+.poke-card-button{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    border-radius: 10px;
+    border: 1px  transparent;
+    padding: 0.5em 1em;
+    font-size: .8em;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: border-color 0.25s;
+    color: #242424;
+    background-color: #f7bbff;
+   
+}
+
+.poke-card-button:hover {
+    border-color: #8d79bc;
+  }
+  .poke-card-button:focus,
+  .poke-card-button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+
+  input {
+    background-color: #d0cfcf;
+    height: 5vh;
+    border-radius: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    }
