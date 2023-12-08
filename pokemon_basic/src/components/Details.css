@@ -1,7 +1,21 @@
 .card-details{
+    background-color:white ;
     border: solid;
+    border-radius: 10px;
+    width: 250px;
+    color: rgb(67, 67, 67);
+
 }
 
-.det-abilities div{
+/* .det-abilities div{
     border: solid;
+} */
+
+.det-ability-u{
+    border: solid;
+    background-color: rgb(177, 218, 237);
+    margin: 5px 3px 1px;
+    border-radius: 10px;
+
+    
 }
