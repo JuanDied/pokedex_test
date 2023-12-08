@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: aqua;
+    background-color: rgba(85, 214, 214, 0.77);
     color: #fff;
     font-size: .8rem;
+    border-radius: 10px;
     
     justify-content: space-between;
 
@@ -13,49 +14,52 @@
     
 }
 
-.poke-card-info {
+/* .poke-card-info {
     position:absolute;
     text-align:center;
-}
+} */
 
-.poke-card-info h1 {
-    margin:auto;
-    line-height:51px;
-    vertical-align:middle;
+.poke-card-header h1 {
+    text-align: center;
+    font-size: xx-large;
 }
 .poker-card-header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    
+
 }
 
 .poke-card-sprite{
-/*     width: 1000px;
-    height: 1000px;
-     */
+    width: 250px;
+    height: auto;
+    
     
 }
 
-.poke-card-info{
 
-    
-
-    
+.poke-card-detail{
+    display: flex;
+    flex-direction: column;
 }
 
 .poke-card-button{
-    margin-top: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 
-    border-radius: 8px;
-    border: 1px solid transparent;
+    border-radius: 10px;
+    border: 1px  transparent;
     padding: 0.5em 1em;
     font-size: .8em;
     font-weight: 500;
-    font-family: inherit;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     cursor: pointer;
+    padding: 8px 16px;
     transition: border-color 0.25s;
     color: #242424;
-    background-color: #f9f9f9;
+    background-color: #f7bbff;
    
 }
 
@@ -69,7 +73,64 @@
   
 
 
-.poke-card-detail{
-    display: flex;
-    flex-direction: column;
+
+
+
+
+
+/*-----------------------------------------------*/
+/* PokeCard.css */
+/* .poke-card {
+    border: 1px solid #ddd; Light grey border
+    border-radius: 10px; Rounded corners
+    overflow: hidden; Ensures the border radius clips the content
+    margin: 10px; Space between cards
+    background-color: #f9f9f9; Light background color
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Subtle shadow for depth
+    transition: transform 0.2s; Smooth transition for hover effect
 }
+
+.poke-card:hover {
+    transform: translateY(-5px); Slightly raise the card on hover
+}
+
+.poke-card-header {
+    display: flex; Aligns image and text side by side
+    align-items: center; Center items vertically
+    padding: 10px; Padding inside the header
+}
+
+.poke-card-sprite {
+    width: 50px; Adjust as needed
+    height: auto; Maintain aspect ratio
+    margin-right: 10px; Space between image and text
+}
+
+.poke-card-info {
+    flex-grow: 1; Allows the info section to fill the remaining space
+}
+
+.poke-card-name {
+    margin: 0; Removes default margin
+    color: #333; Dark text color for the name
+    font-size: 1.2em; Slightly larger text
+}
+
+.poke-card-detail {
+    padding: 10px; Padding inside the detail section
+    text-align: center; Center the button
+}
+
+.poke-card-button {
+    background-color: #007bff; Blue background
+    color: white; White text
+    border: none; No border
+    padding: 8px 16px; Vertical and horizontal padding
+    border-radius: 5px; Rounded corners for the button
+    cursor: pointer; Cursor changes to a hand icon on hover
+    transition: background-color 0.2s; Transition for hover effect
+}
+
+.poke-card-button:hover {
+    background-color: #0056b3; Darker shade of blue on hover
+} */

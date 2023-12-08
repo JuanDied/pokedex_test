@@ -1,3 +1,7 @@
 .card-details{
-    
+    border: solid;
+}
+
+.det-abilities div{
+    border: solid;
 }
