@@ -3,11 +3,16 @@ import { PokeCard } from "../components/PokeCard.jsx";
 import './Home.css'
 import pokemons from "../data/poke-json.json";
 import { useState } from "react";
+import usePokemonSearch from '../hooks/usePokemonSearch';
 
 export function Home() {
   console.log(typeof pokemons, pokemons);
-  const [search, updateSearch] = useState('')
-  const error = false
+
+  //const error = false
+
+  const [searchName, setSearchName] = useState('');
+  const { pokemonData, loading, error } = usePokemonSearch(searchName);
+
 /*
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -30,15 +35,40 @@ export function Home() {
             style={{
               border: '1px solid transparent',
               borderColor: error ? 'red' : 'transparent'
-            }}  value={search} name='query' placeholder='pikachu, ditto..'
+            }} onChange={(e) => setSearchName(e.target.value)}  value={searchName} name='query' placeholder='bulbasaur, charmander..'
           />
           <button className="poke-card-button" type='submit'>Search</button>
         </form>
         
       </header>
     <aside>
+    {loading && <p>Loading...</p>}
+    {error && <p>Error: {error}</p>}
+
     <div className="list-of-pokemons">
-      {pokemons.map(
+      {pokemonData ? (
+        <PokeCard key={pokemonData.id} {...pokemonData}/>
+      ):(
+        pokemons.map(
+          pokemon => (
+          
+  
+            <PokeCard key={pokemon.id} {...pokemon}/>
+          
+          )
+        )
+      )}
+
+
+ 
+    </div>
+    </aside>
+    </article>
+  );
+}
+
+/*
+     {pokemons.map(
         pokemon => (
         
 
@@ -46,11 +76,8 @@ export function Home() {
         
         )
       )}
-    </div>
-    </aside>
-    </article>
-  );
-}
+*/
+
 /*
           <PokeCard
             key={pokemon.id}
