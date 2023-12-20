@@ -1,33 +1,45 @@
 import { PokeCard } from "../components/PokeCard.jsx";
 
 import './Home.css'
-import pokemons from "../data/poke-json.json";
-import { useState } from "react";
+//import pokemons from "../data/poke-json.json";
+import { useEffect, useState } from "react";
 import usePokemonSearch from '../hooks/usePokemonSearch';
 
 export function Home() {
-  console.log(typeof pokemons, pokemons);
+  //console.log(typeof pokemons, pokemons);
 
-  //const error = false
+
+  const defaultPokemons = ['ditto' , 'pikachu' ];
 
   const [searchName, setSearchName] = useState('');
   const { pokemonData, loading, error } = usePokemonSearch(searchName);
 
-/*
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    getMovies({ search })
-  }
+  const preloadDefaultPokemons = async () => {
+    // Preload default Pokémons
+    for (const pokemonName of defaultPokemons) {
+      await setSearchName(pokemonName);
+    }
+    
+  };
 
-  const handleChange = (event) => {
-    const newSearch = event.target.value
-    updateSearch(newSearch)
-    debouncedGetMovies(newSearch)
-  } 
-  {error && <p style={{ color: 'red' }}>{error}</p>}
-*/
+  useEffect(() => {
+    
+    preloadDefaultPokemons();
+    
+    
+  },[])
+
+  const[value, setValue] = useState(''); 
+  function handle(){
+    console.log("handle",value)
+    setSearchName(value)
+  }
+  console.log("handle",value)
+
   return (
+    
     <article className="search-side">
+      
       <header>
         <h1>Search a Pokemon</h1>
         <form className='form' onSubmit={console.log('submitedddd')}>
@@ -35,9 +47,9 @@ export function Home() {
             style={{
               border: '1px solid transparent',
               borderColor: error ? 'red' : 'transparent'
-            }} onChange={(e) => setSearchName(e.target.value)}  value={searchName} name='query' placeholder='bulbasaur, charmander..'
+            }} value={value}  onChange={(e) => {setValue(e.target.value)}}  name='query' placeholder='bulbasaur, charmander..'
           />
-          <button className="poke-card-button" type='submit'>Search</button>
+          <button className="poke-card-button" type='button' onClick={handle}>Search</button>
         </form>
         
       </header>
@@ -46,18 +58,15 @@ export function Home() {
     {error && <p>Error: {error}</p>}
 
     <div className="list-of-pokemons">
-      {pokemonData ? (
-        <PokeCard key={pokemonData.id} {...pokemonData}/>
-      ):(
-        pokemons.map(
-          pokemon => (
-          
-  
-            <PokeCard key={pokemon.id} {...pokemon}/>
-          
-          )
-        )
-      )}
+      
+        
+    {Array.isArray(pokemonData) ? (
+            pokemonData.map(pokemon => (
+              <PokeCard key={pokemon.id} {...pokemon}/>
+            ))
+          ) : (
+            <PokeCard key={pokemonData.id} {...pokemonData}/>
+          )}
 
 
  

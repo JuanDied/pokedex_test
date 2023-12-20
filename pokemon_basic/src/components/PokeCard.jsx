@@ -8,6 +8,7 @@ export function PokeCard(pokemon){
 
     const [show, setShow] = useState(false);
     //const poke_mon = pokemon
+    console.log('look',pokemon)
     
     return(
         <article className="poke-card" >
